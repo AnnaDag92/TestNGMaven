@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Test all Suites" parallel="methods" thread-count="2">
+    <test verbose="2" preserve-order="true" name="LoginTest1">
+        <parameter name="user" value="johnsmith" />
+        <parameter name="pass" value="AnotherPassword!" />
+        <parameter name="valid" value="invalid" />
+
+        <classes>
+            <class name="TestNG.LoginTest_Example3" />
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="LoginTest2">
+        <parameter name="user" value="tomsmith" />
+        <parameter name="pass" value="SuperSecretPassword!" />
+        <parameter name="valid" value="valid" />
+
+        <classes>
+            <class name="TestNG.LoginTest_Example3" />
+        </classes>
+    </test>
+</suite>
